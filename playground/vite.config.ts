@@ -11,6 +11,9 @@ import { defineConfig } from "vite";
 // import eslintPlugin from "vite-plugin-eslint";
 // https://vitejs.dev/config/
 export default defineConfig((conf) => ({
+  server:{
+    port: 3000,
+  },
   plugins: [react(), webpackStats(), Inspect()],
   optimizeDeps: {
     // link: ['vite-react-ts-components'],
