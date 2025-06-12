@@ -5,7 +5,7 @@ import {
   Link,
   Outlet,
   RouterProvider,
-  createBrowserRouter,
+  createHashRouter,
 } from "react-router-dom";
 
 import { examples } from "./examples.gen.js";
@@ -111,7 +111,7 @@ const App = (props: { project: (typeof examples.basic)["projects"][0] }) => {
   return <ExampleComponent.default />;
 };
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Root />,
